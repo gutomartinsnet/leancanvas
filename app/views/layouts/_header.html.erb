@@ -12,14 +12,25 @@
         <li><a href="badges.html">Components</a></li>
         <li><a href="collapsible.html">JavaScript</a></li>
       </ul>
-      <%#= link_to ({ :controller => :items, :action => :show, :id => id, :key => :value }), { :id => "link_id", :class => "link_class", :target => "_blank"} do %>
-      <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">account_circle</i></a>
+      <%= link_to new_user_registration_path, {:class => "button-collapse right"} do %>
+      <!-- <a href="#" data-activates="mobile-demo" class="button-collapse right"> -->
+        <i class="material-icons">account_circle</i>
+      <!-- </a> -->
+      <% end %>
     </div>
 
     <div class="nav-content">
       <ul class="tabs tabs-transparent">
-        <li class="tab"><a href="#test1">Test 1</a></li>
-        <li class="tab"><a class="active" href="#test2">Test 2</a></li>
+        <li class="tab"><a href="#test1">ToDo</a></li>
+        <li class="tab"><a class="active" href="#test2">TimeLine</a></li>
+        <% if user_signed_in? %>
+                <strong><%#= link_to current_user.username, pages_show_path %></strong>
+                <%= link_to 'プロフィール変更', edit_user_registration_path %>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+            <% else %>
+                <%= link_to 'サインアップ', new_user_registration_path %>
+                <%= link_to 'ログイン', new_user_session_path %>
+        <% end %>
         <!-- <li class="tab disabled"><a href="#test3">Disabled Tab</a></li> -->
         <!-- <li class="tab"><a href="#test4">Test 4</a></li> -->
       </ul>

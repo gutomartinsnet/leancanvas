@@ -22,8 +22,10 @@
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: 'btn waves-effect waves-light' %>
   </div>
 <% end %>
+<%#= link_to "Twitterでログイン", user_twitter_omniauth_authorize_path %>
 
+<%#= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
 <%= render "devise/shared/links" %>
