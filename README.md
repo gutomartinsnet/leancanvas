@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+pettitmilkは、Twitter上で動くリマインダーです。
+・テストの勉強
+・綺麗な第3正規化
+・Vueで動かすための前段
+となることを目指します。
 
-Things you may want to cover:
+* ruby 2.4.0
+* rails 5.1.4
 
-* Ruby version
+* モデル
+Task管理Table
+ - name,state,date,user_id
 
-* System dependencies
+Taskテーブル
+ - name,frequency,state,perticipant_num,archievers_num
 
-* Configuration
+ユーザーテーブル
+ - name,img
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ 
