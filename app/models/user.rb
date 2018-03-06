@@ -12,6 +12,7 @@ class User < ApplicationRecord
       user.uid = auth["uid"]
       user.username = auth["info"]["nickname"]
       user.name = auth["info"]["name"]
+      user.email = User.dummy_email(auth)
     end
   end
 
@@ -63,8 +64,11 @@ class User < ApplicationRecord
       super
     end
   end
-  # def update_resource(resource, params)
-  #   resource.update_without_password(params)
-  # end
+  
+  private
+ 
+  def self.dummy_email(auth)
+    "#{auth.uid}-#{auth.provider}@example.com"
+  end
 
 end
