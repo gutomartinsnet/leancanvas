@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable,omniauth_providers: [:twitter]
 
+  attr_accessor :current_password
+
   def self.from_omniauth(auth)
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|
       user.provider = auth["provider"]
@@ -60,5 +62,8 @@ class User < ApplicationRecord
       super
     end
   end
+  # def update_resource(resource, params)
+  #   resource.update_without_password(params)
+  # end
 
 end
