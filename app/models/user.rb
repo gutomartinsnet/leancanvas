@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   attr_accessor :current_password
 
+  has_many :plans
+
   def self.from_omniauth(auth)
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|
       user.provider = auth["provider"]
