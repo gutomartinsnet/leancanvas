@@ -2,6 +2,7 @@ class PlansController < ApplicationController
   before_action :set_plan,only: [:show,:edit,:update,:destroy]
 
   def index
+    @plans = Plan.order("created_at DESC")
   end
 
   def show
@@ -24,9 +25,16 @@ class PlansController < ApplicationController
   end
 
   def update
+    if @plan.update(plan_params)
+      redirect_to @plan, notice: '更新しました'
+    else
+      render :edit
+    end
   end
 
   def destroy
+    @plan.destroy!
+    redirect_to root_path, notice: '削除しました'
   end
 
   private

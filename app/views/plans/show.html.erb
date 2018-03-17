@@ -9,3 +9,8 @@
   <li class="collection-item"><%= @plan.parameter %></li>
   <li class="collection-item"><%= @plan.superiority %></li>
 </ul>
+
+<div class="center">
+  <%= link_to '編集', edit_plan_path(@plan), class: 'btn waves-effect waves-light' %>
+  <%= link_to '削除', plan_path(@plan),method: :DELETE,data:{confirm: "「#{@plan.title}」を削除しますか？"}, class: 'btn waves-effect waves-light' %>
+</div>
