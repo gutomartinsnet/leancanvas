@@ -1,3 +1,56 @@
 <%= form_for(@plan) do  |f| %>
+  <div class="input-field">
+    <%= f.text_field :title, autofocus: true, autocomplete: "title" %>
+    <%= f.label :title %>
+  </div>
 
+  <div class="input-field">
+    <%= f.text_area :segment, class: 'materialize-textarea' %>
+    <%= f.label :segment %>
+  </div>
+
+  <div class="input-field">
+    <%= f.text_area :problem, class: 'materialize-textarea' %>
+    <%= f.label :problem %>
+  </div>
+
+  <div class="input-field">
+    <%= f.text_area :valu, class: 'materialize-textarea' %>
+    <%= f.label :valu %>
+  </div>
+
+  <div class="input-field">
+    <%= f.text_area :solution, class: 'materialize-textarea' %>
+    <%= f.label :solution %>
+  </div>
+
+  <div class="input-field">
+    <%= f.text_area :chanel, class: 'materialize-textarea' %>
+    <%= f.label :chanel %>
+  </div>
+
+  <div class="input-field">
+    <%= f.text_area :profit, class: 'materialize-textarea' %>
+    <%= f.label :profit %>
+  </div>
+
+  <div class="input-field">
+    <%= f.text_area :cost, class: 'materialize-textarea' %>
+    <%= f.label :cost %>
+  </div>
+
+  <div class="input-field">
+    <%= f.text_area :parameter, class: 'materialize-textarea' %>
+    <%= f.label :parameter %>
+  </div>
+
+  <div class="input-field">
+    <%= f.text_area :superiority, class: 'materialize-textarea' %>
+    <%= f.label :superiority %>
+  </div>
+
+  <div class="actions center-align">
+    <%= f.submit "追加する", class: 'btn waves-effect waves-light' %>
+  </div>
+  
 <% end %>

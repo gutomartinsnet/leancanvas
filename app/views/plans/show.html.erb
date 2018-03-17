@@ -1,2 +1,11 @@
-<h1>Plans#show</h1>
-<p>Find me in app/views/plans/show.html.erb</p>
+<ul class="collection with-header">
+  <li class="collection-header"><h4><%= @plan.title%></h4></li>
+  <li class="collection-item"><%= @plan.segment %></li>
+  <li class="collection-item"><%= @plan.problem %></li>
+  <li class="collection-item"><%= @plan.valu %></li>
+  <li class="collection-item"><%= @plan.solution %></li>
+  <li class="collection-item"><%= @plan.profit %></li>
+  <li class="collection-item"><%= @plan.cost %></li>
+  <li class="collection-item"><%= @plan.parameter %></li>
+  <li class="collection-item"><%= @plan.superiority %></li>
+</ul>
