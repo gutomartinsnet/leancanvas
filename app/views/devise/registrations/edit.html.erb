@@ -1,8 +1,8 @@
+<h2>設定 <%#= resource_name.to_s.humanize %></h2>
+
 <div class="center-align">
 <%= link_to 'ログアウト', destroy_user_session_path,class: 'btn waves-effect waves-light', method: :delete %>
 </div>
-
-<h2>設定 <%#= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>

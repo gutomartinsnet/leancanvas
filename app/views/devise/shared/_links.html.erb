@@ -1,3 +1,5 @@
+<% if false %>
+
 <%- if controller_name != 'sessions' %>
   <%= link_to "Log in", new_session_path(resource_name) %><br />
 <% end -%>
@@ -18,8 +20,16 @@
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
 <% end -%>
 
+<% end %>
+
 <%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
-  <% end -%>
+  <div class="center-align">
+    <%- resource_class.omniauth_providers.each do |provider| %>
+      <!-- <%#= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br /> -->
+    <%# end -%>
+      <%= link_to omniauth_authorize_path(resource_name, provider),class: 'btn waves-effect waves-light blue  lighten-1' do %>
+        <i class="fab fa-twitter"></i> Twitterで登録/ログイン
+      <% end %>
+    <% end -%>
+  </div>
 <% end -%>
