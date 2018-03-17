@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PettitmilkRails</title>
+    <title>LeanCanvasMaker</title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -22,5 +22,8 @@
   <body>
     <%= render 'layouts/header' %>
     <%= yield %>
+    <footer>
+     <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+    </footer>
   </body>
 </html>
