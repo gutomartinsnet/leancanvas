@@ -1,6 +1,6 @@
   <nav class="nav-extended">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">LeanCanvasMaker</a>
+      <%= link_to 'LeanCanvasMaker', root_path,class: 'brand-logo' %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="sass.html">Sass</a></li>
@@ -12,11 +12,12 @@
         <li><a href="badges.html">Components</a></li>
         <li><a href="collapsible.html">JavaScript</a></li>
       </ul>
-      <%= link_to edit_user_registration_path, {:class => "button-collapse right"} do %>
+      <%= link_to edit_user_registration_path, {:class => "user_icon right"} do %>
         <i class="material-icons">account_circle</i>
       <% end %>
     </div>
   </nav>
+
 <script type="text/javascript">
  $(".button-collapse").sideNav();
 </script>
