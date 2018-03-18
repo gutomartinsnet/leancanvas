@@ -14,7 +14,12 @@
  *= require_self
  */
 
-
+body{
+  color: #333;
+}
+h2{
+  font-size: 24px;
+}
 footer{
   position: fixed;
   bottom: 2em;
