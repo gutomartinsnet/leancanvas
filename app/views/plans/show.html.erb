@@ -1,16 +1,59 @@
-<ul class="collection with-header">
-  <li class="collection-header"><h4><%= @plan.title%></h4></li>
-  <li class="collection-item"><%= @plan.segment %></li>
-  <li class="collection-item"><%= @plan.problem %></li>
-  <li class="collection-item"><%= @plan.valu %></li>
-  <li class="collection-item"><%= @plan.solution %></li>
-  <li class="collection-item"><%= @plan.profit %></li>
-  <li class="collection-item"><%= @plan.cost %></li>
-  <li class="collection-item"><%= @plan.parameter %></li>
-  <li class="collection-item"><%= @plan.superiority %></li>
-</ul>
+<section id="leancanvas_show">
+    <h3><%= @plan.title%></h3>
+
+<div class="row main_row">
+  <div class="grey lighten-4 area_box col s2">
+      <h4>【課題】</h4>
+      <%= @plan.problem %>
+  </div>
+  <div class="grey lighten-4 area_box col s3">
+    <div class="smallbox">
+      <h4>【ソリューション】</h4>
+      <%= @plan.solution %>
+    </div>
+    <div class="smallbox">
+      <h4>【主要指標】</h4>
+      <%= @plan.parameter %>
+    </div>
+  </div>
+
+  <div class="grey lighten-4 area_box col s2">  
+      <h4>【独自の価値提案】</h4>
+      <%= @plan.valu %>
+  </div>
+
+  <div class="grey lighten-4 area_box col s3">
+    <div class="smallbox">
+      <h4>【圧倒的な優位性】</h4>
+      <%= @plan.superiority %>
+    </div>
+    <div class="smallbox">
+      <h4>【チャネル】</h4>
+      <%= @plan.chanel %>
+    </div>
+  </div>
+
+  <div class="grey lighten-4 area_box col s2">
+      <h4>【顧客セグメント】</h4>
+      <%= @plan.segment %>
+  </div>
+</div>
+
+
+<div class="row sub_row">
+  <div class="col s6 moneybox grey lighten-4">
+    <h4>【コスト構造】</h4>
+    <%= @plan.cost %>
+  </div>
+  <div class="col s6 moneybox grey lighten-4">
+    <h4>【収益の流れ】</h4>
+    <%= @plan.profit %>
+  </div>
+</div>
 
 <div class="center">
   <%= link_to '編集', edit_plan_path(@plan), class: 'btn waves-effect waves-light' %>
   <%= link_to '削除', plan_path(@plan),method: :DELETE,data:{confirm: "「#{@plan.title}」を削除しますか？"}, class: 'btn waves-effect waves-light' %>
 </div>
+
+</section>
