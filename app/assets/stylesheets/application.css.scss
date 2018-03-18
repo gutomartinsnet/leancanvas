@@ -24,3 +24,38 @@ footer{
 .user_icon{
   margin: 0 18px;
 }
+
+#leancanvas_form{
+  .main_row{
+    margin-bottom: 0px;
+    .area_box{
+      border: 1px solid #ccc;
+      height: 500px;
+    }
+    .smallbox{
+      height: 230px;
+    }
+  }
+
+  .sub_row{
+    span.num{
+      top: 30%;
+    }
+    .moneybox{
+      border: 1px solid #ccc;
+      height:150px;
+    }
+  }
+  .input-field{
+    position:relative;
+    span.num{
+      position: absolute;
+      right: 0;
+      left: 0;
+      font-size: 4em;
+      font-weight: bold;
+      text-align: center;
+      color: blue;
+    }
+  }
+}

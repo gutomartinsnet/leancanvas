@@ -1,56 +1,88 @@
+<section id="leancanvas_form">
 <%= form_for(@plan) do  |f| %>
   <div class="input-field">
     <%= f.text_field :title, autofocus: true, autocomplete: "title" %>
-    <%= f.label :title %>
+    <%= f.label :title, "サービス名" %>
   </div>
 
-  <div class="input-field">
-    <%= f.text_area :segment, class: 'materialize-textarea' %>
-    <%= f.label :segment %>
+<div class="row main_row">
+  <div class="area_box col s2">
+    <div class="input-field">
+      <%= f.text_area :problem, class: 'materialize-textarea' %>
+      <%= f.label :problem,"課題" %>
+      <span class="num">2</span>
+    </div>
   </div>
 
-  <div class="input-field">
-    <%= f.text_area :problem, class: 'materialize-textarea' %>
-    <%= f.label :problem %>
+  <div class="area_box col s3">
+    <div class="input-field smallbox">
+      <%= f.text_area :solution, class: 'materialize-textarea' %>
+      <%= f.label :solution,"ソリューション" %>
+      <span class="num">4</span>
+    </div>
+
+
+    <div class="input-field smallbox">
+      <%= f.text_area :parameter, class: 'materialize-textarea' %>
+      <%= f.label :parameter,"主要指標" %>
+      <span class="num">8</span>
+    </div>  
   </div>
 
-  <div class="input-field">
-    <%= f.text_area :valu, class: 'materialize-textarea' %>
-    <%= f.label :valu %>
+
+  <div class="area_box col s2">
+    <div class="input-field">
+      <%= f.text_area :valu, class: 'materialize-textarea' %>
+      <%= f.label :valu,"独自の価値提案" %>
+      <span class="num">3</span>
+    </div>
   </div>
 
-  <div class="input-field">
-    <%= f.text_area :solution, class: 'materialize-textarea' %>
-    <%= f.label :solution %>
+  <div class="area_box col s3">
+    <div class="input-field smallbox">
+      <%= f.text_area :superiority, class: 'materialize-textarea' %>
+      <%= f.label :superiority,"圧倒的な優位性" %>
+      <span class="num">9</span>
+    </div>
+    
+    <div class="input-field smallbox">
+      <%= f.text_area :chanel, class: 'materialize-textarea' %>
+      <%= f.label :chanel,"チャネル" %>
+      <span class="num">5</span>
+    </div>
   </div>
 
-  <div class="input-field">
-    <%= f.text_area :chanel, class: 'materialize-textarea' %>
-    <%= f.label :chanel %>
+  <div class="area_box col s2">
+    <div class="input-field">
+      <%= f.text_area :segment, class: 'materialize-textarea' %>
+      <%= f.label :segment,"顧客セグメント" %>
+      <span class="num">1</span>
+    </div>
+  </div>
+</div>
+
+
+<div class="row sub_row">
+  <div class="col s6 moneybox">
+    <div class="input-field">
+      <%= f.text_area :cost, class: 'materialize-textarea' %>
+      <%= f.label :cost,"コスト構造" %>
+      <span class="num">7</span>
+    </div>
   </div>
 
-  <div class="input-field">
-    <%= f.text_area :profit, class: 'materialize-textarea' %>
-    <%= f.label :profit %>
+  <div class="col s6 moneybox">
+    <div class="input-field">
+      <%= f.text_area :profit, class: 'materialize-textarea' %>
+      <%= f.label :profit,"収益の流れ" %>
+      <span class="num">6</span>
+    </div>
   </div>
-
-  <div class="input-field">
-    <%= f.text_area :cost, class: 'materialize-textarea' %>
-    <%= f.label :cost %>
-  </div>
-
-  <div class="input-field">
-    <%= f.text_area :parameter, class: 'materialize-textarea' %>
-    <%= f.label :parameter %>
-  </div>
-
-  <div class="input-field">
-    <%= f.text_area :superiority, class: 'materialize-textarea' %>
-    <%= f.label :superiority %>
-  </div>
+</div>
 
   <div class="actions center-align">
     <%= f.submit "追加する", class: 'btn waves-effect waves-light' %>
   </div>
   
 <% end %>
+</section>
