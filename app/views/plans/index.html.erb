@@ -1,3 +1,4 @@
+<% if false %>
 <ul class="collection with-header">
   <% @plans.each do |plan| %>
     <li class="collection-item">
@@ -5,10 +6,12 @@
     </li>
   <% end %>
 </ul>
-
-<% if false %>
+<% end %>
+<%# if false %>
+<div class="row">
 <% @plans.each do |plan| %>
-  <div class="card">
+
+  <div class="card small col m6">
     <div class="card-image waves-effect waves-block waves-light">
         <%= image_tag plan.image.url if plan.image.url != nil %>
     </div>
@@ -18,4 +21,5 @@
     </div>
   </div>
 <% end %>
-<% end %>
+</div>  
+<%# end %>

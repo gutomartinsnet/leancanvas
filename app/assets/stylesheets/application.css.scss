@@ -68,3 +68,12 @@ footer{
     border-bottom: 1px solid #ccc;
   }
 }
+
+.card-image{
+  overflow: hidden;
+  position: relative;
+  img{
+    position: absolute;
+    margin-top: -2em;
+  }
+}

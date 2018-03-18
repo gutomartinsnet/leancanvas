@@ -55,14 +55,21 @@
 <div class="center">
 <% if user_signed_in? %>
   <% if @plan.user.id == current_user.id %>
-    
       <%= link_to '編集', edit_plan_path(@plan), class: 'btn waves-effect waves-light' %>
       <%= link_to '削除', plan_path(@plan),method: :DELETE,data:{confirm: "「#{@plan.title}」を削除しますか？"}, class: 'btn waves-effect waves-light' %>
     
   <% end %>
 <% end %>
 <p>
-  <a href="<%= @plan.image %>" download="<%= @plan.title%>" class="btn waves-effect waves-light">ダウンロード</a>
+  <% if @plan.image.url != nil %>
+    <a href="<%= @plan.image %>" download="<%= @plan.title%>" class="btn waves-effect waves-light">ダウンロード</a>
+  <% else %>
+  <%= form_for(@plan,url: plan_path(@plan), remote: true) do |f| %>
+    <%= f.hidden_field :id %>
+    <%= f.submit "画像を生成", class: 'btn waves-effect waves-light' %>
+  <% end %>
+    <%#= link_to '画像を生成',plan_path(@plan),method: :put,class: "btn waves-effect waves-light" %>
+  <% end %>
 </p>
 </div>
 

@@ -1,5 +1,5 @@
 class PlansController < ApplicationController
-  before_action :set_plan,only: [:show,:edit,:update,:destroy]
+  before_action :set_plan,only: [:show,:edit,:update,:destroy,:imgsave]
 
   def index
     @plans = Plan.order("created_at DESC")
@@ -16,6 +16,7 @@ class PlansController < ApplicationController
   end
 
   def create
+    @plan = current_user.plans.new(plan_params)
     if @plan.save
       redirect_to @plan, notice: 'LeanCanvasを作成しました'
     else
@@ -24,14 +25,14 @@ class PlansController < ApplicationController
   end
 
   def update
+    if @plan.update(plan_params)
       kit   = IMGKit.new(request.url)
       img   = kit.to_img(:png)
-      file  = Tempfile.new(["image_#{@plan.id}", '.png'], 'tmp',
-                             :encoding => 'ascii-8bit')
+      file  = Tempfile.new(["image_#{@plan.id}", '.png'], 'tmp',:encoding => 'ascii-8bit')
       file.write(img)
       file.flush
       @plan.image = file
-    if @plan.update(plan_params)
+      @plan.update(plan_params)
       redirect_to @plan, notice: '更新しました'
     else
       render :edit
@@ -43,6 +44,15 @@ class PlansController < ApplicationController
     redirect_to root_path, notice: '削除しました'
   end
 
+  def imgsave
+    kit   = IMGKit.new(request.referer)
+    img   = kit.to_img(:png)
+    file  = Tempfile.new(["image_#{@plan.id}", '.png'], 'tmp',:encoding => 'ascii-8bit')
+    file.write(img)
+    file.flush
+    @plan.image = file
+    @plan.update(plan_params)
+  end
 
   private
   def set_plan
