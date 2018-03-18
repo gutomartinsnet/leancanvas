@@ -1,14 +1,14 @@
 <section id="leancanvas_form">
 <%= form_for(@plan) do  |f| %>
   <div class="input-field">
-    <%= f.text_field :title, autofocus: true, autocomplete: "title",:tabindex => "1" %>
-    <%= f.label :title, "サービス名" %>
+    <%= f.text_field :title, autofocus: true, autocomplete: "title",:tabindex => "1",:required => true %>
+    <%= f.label :title, "サービス名（入力必須）" %>
   </div>
 
 <div class="row main_row">
   <div class="area_box col s2">
     <div class="input-field">
-      <%= f.text_area :problem, class: 'materialize-textarea',:tabindex => "2" %>
+      <%= f.text_area :problem, class: 'materialize-textarea',:tabindex => "2",:placeholder=>"上位3つの課題" %>
       <%= f.label :problem,"課題" %>
       <span class="num">1</span>
     </div>
@@ -16,14 +16,14 @@
 
   <div class="area_box col s3">
     <div class="input-field smallbox">
-      <%= f.text_area :solution, class: 'materialize-textarea',:tabindex => "5" %>
+      <%= f.text_area :solution, class: 'materialize-textarea',:tabindex => "5",:placeholder=>"上位3つの機能" %>
       <%= f.label :solution,"ソリューション" %>
       <span class="num">4</span>
     </div>
 
 
     <div class="input-field smallbox">
-      <%= f.text_area :parameter, class: 'materialize-textarea',:tabindex => "9" %>
+      <%= f.text_area :parameter, class: 'materialize-textarea',:tabindex => "9",:placeholder=>"計測する主要活動" %>
       <%= f.label :parameter,"主要指標" %>
       <span class="num">8</span>
     </div>  
@@ -32,7 +32,7 @@
 
   <div class="area_box col s2">
     <div class="input-field">
-      <%= f.text_area :valu, class: 'materialize-textarea',:tabindex => "4" %>
+      <%= f.text_area :valu, class: 'materialize-textarea',:tabindex => "4",:placeholder=>"あなたの差別化要因と注目に値する価値を説明した単一で明確な説得力のあるメッセージ" %>
       <%= f.label :valu,"独自の価値提案" %>
       <span class="num">3</span>
     </div>
@@ -40,13 +40,13 @@
 
   <div class="area_box col s3">
     <div class="input-field smallbox">
-      <%= f.text_area :superiority, class: 'materialize-textarea' ,:tabindex => "10" %>
+      <%= f.text_area :superiority, class: 'materialize-textarea' ,:tabindex => "10",:placeholder=>"簡単にコピーや購入ができないもの" %>
       <%= f.label :superiority,"圧倒的な優位性" %>
       <span class="num">9</span>
     </div>
     
     <div class="input-field smallbox">
-      <%= f.text_area :chanel, class: 'materialize-textarea',:tabindex => "6" %>
+      <%= f.text_area :chanel, class: 'materialize-textarea',:tabindex => "6",:placeholder=>"顧客への経路" %>
       <%= f.label :chanel,"チャネル" %>
       <span class="num">5</span>
     </div>
@@ -54,7 +54,7 @@
 
   <div class="area_box col s2">
     <div class="input-field">
-      <%= f.text_area :segment, class: 'materialize-textarea',:tabindex => "3" %>
+      <%= f.text_area :segment, class: 'materialize-textarea',:tabindex => "3",:placeholder=>"ターゲットにする顧客" %>
       <%= f.label :segment,"顧客セグメント" %>
       <span class="num">2</span>
     </div>
@@ -65,7 +65,7 @@
 <div class="row sub_row">
   <div class="col s6 moneybox">
     <div class="input-field">
-      <%= f.text_area :cost, class: 'materialize-textarea',:tabindex => "8" %>
+      <%= f.text_area :cost, class: 'materialize-textarea',:tabindex => "8",:placeholder=>"流通コスト/顧客獲得コスト/ホスティングコスト/人件費など" %>
       <%= f.label :cost,"コスト構造" %>
       <span class="num">7</span>
     </div>
@@ -73,7 +73,7 @@
 
   <div class="col s6 moneybox">
     <div class="input-field">
-      <%= f.text_area :profit, class: 'materialize-textarea',:tabindex => "7" %>
+      <%= f.text_area :profit, class: 'materialize-textarea',:tabindex => "7",:placeholder=>"収益モデル/収益/顧客生涯価値/粗利益" %>
       <%= f.label :profit,"収益の流れ" %>
       <span class="num">6</span>
     </div>
