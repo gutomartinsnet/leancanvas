@@ -9,7 +9,13 @@ end
 gem 'devise'
 gem 'omniauth-twitter'
 
+# スクリーンショット
+gem 'imgkit'
+gem 'wkhtmltoimage-binary'
 
+gem 'rails-erd',group: [:development,:test]
+gem 'pry-rails',group: [:development,:test]
+gem 'pry-byebug',group: [:development,:test]
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'

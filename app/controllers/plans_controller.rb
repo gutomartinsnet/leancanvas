@@ -18,6 +18,12 @@ class PlansController < ApplicationController
   def create
     @plan = current_user.plans.new(plan_params)
     if @plan.save
+      kit   = IMGKit.new(url_for(only_path: false) )
+      img   = kit.to_img(:png)
+      file  = Tempfile.new(["image_#{@plan.id}", '.png'], 'tmp',
+                             :encoding => 'ascii-8bit')
+      file.write(img)
+      file.flush
       redirect_to @plan, notice: 'LeanCanvasを作成しました'
     else
       render :new
@@ -26,6 +32,12 @@ class PlansController < ApplicationController
 
   def update
     if @plan.update(plan_params)
+      kit   = IMGKit.new(url_for(only_path: false) )
+      img   = kit.to_img(:png)
+      file  = Tempfile.new(["image_#{@plan.id}", '.png'], 'tmp',
+                             :encoding => 'ascii-8bit')
+      file.write(img)
+      file.flush
       redirect_to @plan, notice: '更新しました'
     else
       render :edit
