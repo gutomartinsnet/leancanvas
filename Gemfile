@@ -13,9 +13,16 @@ gem 'omniauth-twitter'
 gem 'imgkit'
 gem 'wkhtmltoimage-binary'
 
+#画像の保存
+gem 'carrierwave'
+
 gem 'rails-erd',group: [:development,:test]
 gem 'pry-rails',group: [:development,:test]
 gem 'pry-byebug',group: [:development,:test]
+
+gem 'hirb'         # 出力結果を表として出力するgem
+gem 'hirb-unicode'  # マルチバイト文字の表示を補正するgem
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'

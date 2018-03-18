@@ -5,3 +5,17 @@
     </li>
   <% end %>
 </ul>
+
+<% if false %>
+<% @plans.each do |plan| %>
+  <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+        <%= image_tag plan.image.url if plan.image.url != nil %>
+    </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4"><%= plan.title %></span>
+      <p><%= link_to "詳細を見る", plan_path(plan) %></p>
+    </div>
+  </div>
+<% end %>
+<% end %>
