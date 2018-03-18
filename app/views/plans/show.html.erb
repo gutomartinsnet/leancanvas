@@ -1,6 +1,8 @@
 <section id="leancanvas_show">
     <h3><%= @plan.title%></h3>
-
+    <div class="tw_btn">
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
 <div class="row main_row">
   <div class="grey lighten-4 area_box col s2">
       <h4>【課題】</h4>
@@ -64,11 +66,10 @@
   <% if @plan.image.url != nil %>
     <a href="<%= @plan.image %>" download="<%= @plan.title%>" class="btn waves-effect waves-light">ダウンロード</a>
   <% else %>
-  <%= form_for(@plan,url: plan_path(@plan), remote: true) do |f| %>
-    <%= f.hidden_field :id %>
-    <%= f.submit "画像を生成", class: 'btn waves-effect waves-light' %>
-  <% end %>
-    <%#= link_to '画像を生成',plan_path(@plan),method: :put,class: "btn waves-effect waves-light" %>
+    <%= form_for(@plan,url: plan_path(@plan), remote: true) do |f| %>
+      <%= f.hidden_field :id %>
+      <%= f.submit "画像を生成", class: 'btn waves-effect waves-light' %>
+    <% end %>
   <% end %>
 </p>
 </div>
