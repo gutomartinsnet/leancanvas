@@ -11,6 +11,37 @@
     <%= f.label :name,'表示名' %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
   </div>
+  <div class="row">
+    <div class="file-field input-field col s6">
+      <div class="btn">
+        <span>File</span>
+        <%= f.file_field :icon,id: :user_img %>
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" value="<%= @user[:icon] if @user.image != nil %>">
+      </div>
+    </div>
+    <div class="user_edit_img col s6">
+      <%= image_tag @user.image, id: :img_prev if @user.image? %>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(function() {
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            $('#img_prev').attr('src', e.target.result);
+          }
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+      $("#user_img").change(function(){
+        readURL(this);
+      });
+    });
+  </script>
 
 <% if false %>
   <div class="field">

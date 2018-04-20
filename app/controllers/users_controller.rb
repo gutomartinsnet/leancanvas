@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     if request.path == "/"
       @user = current_user
     else
-      @user = User.find_by(id: params[:id])
+      @user = User.find_by(username: params[:username])
     end
     
     if user_signed_in?
