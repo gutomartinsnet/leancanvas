@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
 h2{
   font-size: 24px;
 }
@@ -28,9 +27,44 @@ footer{
   z-index: 99;
 }
 
+// header
 .user_icon{
   margin: 0 18px;
 }
+.user_icon.right{
+  i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .user_img_icon{
+      line-height:38px;
+      width:38px;
+      height: 38px;
+      max-width: 100%;
+    }
+  }
+}
+.user_img_icon{
+  border-radius: 100%;
+  object-fit: cover;
+}
+.side-nav{
+  width: 55%;
+  .user_name{
+    font-size: 1.2em;
+    margin-top: .5em;
+    a{
+      padding-left: .8em;
+      i{
+        .user_img_icon{
+          width: 1.6em;
+          height: 1.6em;
+        }
+      }
+    }
+  }
+}
+
 
 #leancanvas_form,#leancanvas_show{
   width: 95%;
@@ -47,6 +81,7 @@ footer{
   }
 
   .sub_row{
+    margin-bottom: 0;
     span.num{
       top: 30%;
     }
@@ -67,12 +102,31 @@ footer{
       color: blue;
     }
   }
+  .desplay_select{
+    margin-bottom:2em;
+    margin-top: 1em;
+  }
+}
+
+.admin_block{
+  margin-top: 1.5em;
 }
 
 #leancanvas_show{
-  h4{
-    font-size: 20px;
+  h3{
+    font-size: 2em;
     border-bottom: 1px solid #ccc;
+    span.plans_user{
+      font-size: .6em;
+      max-height: 100%;
+      a{
+        line-height: 20px;
+        height: 20px;
+        .user_img_icon{
+          height: 22px;
+        }
+      }
+    }
   }
 }
 
@@ -86,9 +140,15 @@ footer{
 }
 
 
-
+// ログインページ
+// .leancanvas_img_block{
+//     text-align: center;
+//   img{
+//     max-width: 100%;
+//   }
+// }
 .login_top_img{
-  background: image-url('business_top.jpg');
+  background: image-url('/business_top.jpg');
   background-size: cover;
   // -webkit-background-size: cover;
   // -moz-background-size: cover;
@@ -133,7 +193,7 @@ footer{
         width: 80%;
         text-align: center;
         line-height: 30px;
-     }
+      }
     }
     .fb_login_link{
       margin-bottom: 1.5rem;
@@ -141,6 +201,13 @@ footer{
   }
 }
 
+
+.user_edit_img{
+  img{
+    max-width: 100%;
+    max-height: 200px;
+  }
+}
 @media (min-width: 600px) {
   .login_top_img{
     img{
@@ -158,3 +225,4 @@ footer{
     }
   }
 }
+

@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable,omniauth_providers: [:twitter]
 
   attr_accessor :current_password
+  mount_uploader :icon, ImageUploader
 
   has_many :plans
 
@@ -14,6 +15,7 @@ class User < ApplicationRecord
       user.uid = auth["uid"]
       user.username = auth["info"]["nickname"]
       user.name = auth["info"]["name"]
+      user.image = auth["info"]["image"]
       user.email = User.dummy_email(auth)
     end
   end

@@ -5,7 +5,15 @@ class UsersController < ApplicationController
     else
       @user = User.find_by(id: params[:id])
     end
-    @plans = @user.plans.all if @user.plans != nil
-
+    
+    if user_signed_in?
+      if current_user.username == @user.username
+        @plans = @user.plans.where(desplay: true) if @user.plans != nil
+      else
+        @plans = @user.plans if @user.plans != nil
+      end
+    else
+      @plans = @user.plans.all if @user.plans != nil
+    end
   end
 end
