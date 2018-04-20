@@ -3,28 +3,73 @@
       <%= link_to 'LeanCanvasMaker', plans_path,class: 'brand-logo' %>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to '一覧', plans_path %></li>
+        <li><%= link_to 'ホーム', plans_path %></li>
         <% if user_signed_in? %>
         <li><%= link_to '描く',new_plan_path %></li>
+        <li><%= link_to 'マイページ',new_plan_path %></li>
         <li><%= link_to '設定',edit_user_registration_path %></li>
         <% else %>
         <li><%= link_to '描く',new_user_session_path %></li>
+        <li><%= link_to 'ログイン',new_user_session_path %></li>
         <% end %>
         
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><%= link_to '一覧', plans_path %></li>
         <% if user_signed_in? %>
-        <li><%= link_to '描く',new_plan_path %></li>
-        <li><%= link_to '設定',edit_user_registration_path %></li>
+        <li class="user_name">
+          <%= link_to users_show_path(current_user.username) do %>
+            <% if current_user.icon? %>
+              <i><%= image_tag current_user.icon ,class: 'user_img_icon' if current_user.icon != nil %></i>
+            <% else %>
+              <i><%= image_tag current_user.image ,class: 'user_img_icon' if current_user.image != nil %></i>
+            <% end %>
+          <span><%= current_user.name %></span>
+          <% end %>
+        </li>
+        <% end %>
+        <li>
+          <%= link_to plans_path do %>
+            <i class="fas fa-home"></i>ホーム
+          <% end %>
+        </li>
+        <% if user_signed_in? %>
+        <li>
+          <%= link_to new_plan_path do %>
+            <i class="fas fa-pencil-alt"></i>描く
+          <% end %>
+          </li>
+        <li>
+          <%= link_to edit_user_registration_path do %>
+            <i class="fas fa-cogs"></i>設定
+          <% end %>
+        </li>
         <% else %>
-        <li><%= link_to '描く',new_user_session_path %></li>
+        <li>
+          <%= link_to new_user_session_path do %>
+            <i class="fas fa-pencil-alt"></i>描く
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_user_session_path do %>
+            <i class="fas fa-sign-in-alt"></i>ログイン
+          <% end %>
+        </li>
         <% end %>
       </ul>
       <% if user_signed_in? %>
-      <%= link_to users_show_path(current_user), {:class => "user_icon right"} do %>
-        <i class="material-icons">account_circle</i>
-      <% end %>
+        <% if current_user.image.nil? && current_user.icon.nil? %>
+          <%= link_to users_show_path(current_user.username), {:class => "user_icon right"} do %>
+            <i class="material-icons">account_circle</i>
+          <% end %>
+        <% else %>
+          <%= link_to users_show_path(current_user.username), {:class => "user_icon right"} do %>
+            <% if current_user.icon? %>
+              <i><%= image_tag current_user.icon ,class: 'user_img_icon' if current_user.icon != nil %></i>
+            <% else %>
+              <i><%= image_tag current_user.image ,class: 'user_img_icon' if current_user.image != nil %></i>
+            <% end %>
+          <% end %>
+        <% end %>
       <% end %>
     </div>
   </nav>

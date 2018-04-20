@@ -84,3 +84,77 @@ footer{
     margin-top: -2em;
   }
 }
+
+
+
+.login_top_img{
+  background: image-url('business_top.jpg');
+  background-size: cover;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
+  height: 95vh;
+  width: 100%;
+  background-position: center center;
+  text-align: center;
+  position: relative;
+  &:before {
+    z-index: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(0,0,0,.05);
+  }
+  img{
+    max-width: 60%;
+    border-radius: 50%;
+    padding: 1rem;
+    margin-top: 4rem;
+  }
+  .login_block{
+    position: absolute;
+    bottom: 8em;
+    right: 0;
+    left: 0;
+    h3.center{
+      font-size: 1.5rem;
+      margin: 0;
+      color: #fff;
+      margin: 3rem auto 1rem;
+    }
+    .login_link{
+      a{
+        border: 2px solid #fff;
+        width: 80%;
+        text-align: center;
+        line-height: 30px;
+     }
+    }
+    .fb_login_link{
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .login_top_img{
+    img{
+      max-width: 20%;
+    }
+    .login_block{
+      .login_link{
+        a{
+          border: 2px solid #fff;
+          width: 40%;
+          text-align: center;
+          line-height: 30px;
+        }
+      }
+    }
+  }
+}
