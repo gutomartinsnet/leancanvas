@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+html{
+  font-family: 'IPAex明朝',' Roboto', 'sans-serif';
+}
 h2{
   font-size: 24px;
 }
@@ -113,9 +116,6 @@ footer{
 }
 
 #leancanvas_show{
-  h4{
-    font-size:1.2em;
-  }
   h3{
     font-size: 2em;
     border-bottom: 1px solid #ccc;
@@ -204,9 +204,6 @@ footer{
   }
 }
 
-.btn_block{
-  margin-top:1em;
-}
 
 .user_edit_img{
   img{
