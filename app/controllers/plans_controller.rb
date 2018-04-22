@@ -2,7 +2,7 @@ class PlansController < ApplicationController
   before_action :set_plan,only: [:show,:edit,:update,:destroy,:imgsave]
 
   def index
-    @plans = Plan.order("created_at DESC")
+    @plans = Plan.where(desplay: true).order("created_at DESC")
   end
 
   def show
