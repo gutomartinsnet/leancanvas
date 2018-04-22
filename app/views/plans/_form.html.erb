@@ -80,6 +80,13 @@
   </div>
 </div>
 
+<div class="center">
+  <p class="center">
+  <%= f.check_box :desplay, {:checked => true, :class => "filled-in"}, "true" ,"false"%>
+    <%= f.label :desplay, "公開をしますか", id: 'plan_desplay', for: 'plan_desplay' %>
+  </p>
+</div>
+
   <div class="actions center-align btn_block">
     <%= f.submit "追加する", class: 'btn waves-effect waves-light' ,:tabindex => "11",:required => true %>
   </div>
