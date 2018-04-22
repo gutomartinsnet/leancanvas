@@ -57,7 +57,7 @@
 </div>
 
 <%#= image_tag @plan.image.url %>
-<div class="center">
+<div class="center btn_block">
 <% if user_signed_in? %>
   <% if @plan.user.id == current_user.id %>
       <%= link_to '編集', edit_plan_path(@plan), class: 'btn waves-effect waves-light' %>
