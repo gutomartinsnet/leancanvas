@@ -15,6 +15,8 @@ gem 'wkhtmltoimage-binary'
 
 #画像の保存
 gem 'carrierwave'
+gem 'fog-aws'
+gem 'fog'
 
 gem 'rails-erd',group: [:development,:test]
 gem 'pry-rails',group: [:development,:test]
