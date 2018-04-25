@@ -134,6 +134,12 @@ footer{
       }
     }
   }
+  .area_box{
+    overflow:hidden;
+    .smallbox{
+     overflow:hidden;
+    }
+  }
 }
 
 .card-image{
