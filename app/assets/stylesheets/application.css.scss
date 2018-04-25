@@ -230,9 +230,6 @@ footer{
 .non_active{
   display:none;
 }
-// .not_sp{
-  // display:none;
-// }
 .sp{
   .single_block{
     border:1px solid #333;
@@ -245,6 +242,12 @@ footer{
     p{
       margin-top:.1em;
     }
+  }
+}
+.sp_on,.pc_on{
+  padding:0 1rem;
+  i.left{
+    margin-right: 5px;
   }
 }
 @media (min-width: 600px) {
