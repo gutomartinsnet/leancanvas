@@ -3,15 +3,21 @@
     <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-text="@<%= @plan.user.username %> さんが 「<%= @plan.title %>」を作成しました。 #LeancanvasMaker">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <div class="fb-like" data-href="http://www.leancanvasmaker.com" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 
-    <!-- <div class="tw_btn"> -->
-      <!-- <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter&#45;share&#45;button" data&#45;show&#45;count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf&#45;8"></script> -->
-    <!-- </div> -->
+  <!-- Switch -->
+  <p class="center">
+  <a class="sp_on btn waves-effect waves-light btn-small"><i class="material-icons left">phone_iphone</i>SP表示にする</a>
+  </p>
+  <p class="center">
+    <a class="pc_on btn waves-effect waves-light btn-small teal lighten-3"><i class="material-icons left">laptop_mac</i>PC表示にする</a>
+  </p>
+
+<div class="not_sp">
 <div class="row main_row">
-  <div class="grey lighten-4 area_box col s2">
+  <div class="grey lighten-5 area_box col s2">
       <h4>【課題】</h4>
       <%= simple_format(@plan.problem) %>
   </div>
-  <div class="grey lighten-4 area_box col s3">
+  <div class="grey lighten-5 area_box col s3">
     <div class="smallbox">
       <h4>【ソリューション】</h4>
       <%= simple_format(@plan.solution) %>
@@ -22,12 +28,12 @@
     </div>
   </div>
 
-  <div class="grey lighten-4 area_box col s2">
+  <div class="grey lighten-5 area_box col s2">
       <h4>【独自の価値提案】</h4>
       <%= simple_format(@plan.valu) %>
   </div>
 
-  <div class="grey lighten-4 area_box col s3">
+  <div class="grey lighten-5 area_box col s3">
     <div class="smallbox">
       <h4>【圧倒的な優位性】</h4>
       <%= simple_format(@plan.superiority) %>
@@ -38,7 +44,7 @@
     </div>
   </div>
 
-  <div class="grey lighten-4 area_box col s2">
+  <div class="grey lighten-5 area_box col s2">
       <h4>【顧客セグメント】</h4>
       <%= simple_format(@plan.segment) %>
   </div>
@@ -46,17 +52,61 @@
 
 
 <div class="row sub_row">
-  <div class="col s6 moneybox grey lighten-4">
+  <div class="col s6 moneybox grey lighten-5">
     <h4>【コスト構造】</h4>
     <%= simple_format(@plan.cost) %>
   </div>
-  <div class="col s6 moneybox grey lighten-4">
+  <div class="col s6 moneybox grey lighten-5">
+    <h4>【収益の流れ】</h4>
+    <%= simple_format(@plan.profit) %>
+  </div>
+</div>
+</div>
+
+
+<div class="sp">
+  <div class="single_block">
+      <h4>【課題】</h4>
+      <%= simple_format(@plan.problem) %>
+  </div>
+  <div class="single_block">
+    <h4>【ソリューション】</h4>
+    <%= simple_format(@plan.solution) %>
+  </div>
+  <div class="single_block">
+    <h4>【主要指標】</h4>
+    <%= simple_format(@plan.parameter) %>
+  </div>
+
+  <div class="single_block">
+      <h4>【独自の価値提案】</h4>
+      <%= simple_format(@plan.valu) %>
+  </div>
+
+  <div class="single_block">
+    <h4>【圧倒的な優位性】</h4>
+    <%= simple_format(@plan.superiority) %>
+  </div>
+  <div class="single_block">
+    <h4>【チャネル】</h4>
+    <%= simple_format(@plan.chanel) %>
+  </div>
+
+  <div class="single_block">
+      <h4>【顧客セグメント】</h4>
+      <%= simple_format(@plan.segment) %>
+  </div>
+
+  <div class="single_block">
+    <h4>【コスト構造】</h4>
+    <%= simple_format(@plan.cost) %>
+  </div>
+  <div class="single_block">
     <h4>【収益の流れ】</h4>
     <%= simple_format(@plan.profit) %>
   </div>
 </div>
 
-<%#= image_tag @plan.image.url %>
 <div class="center btn_block">
 <% if user_signed_in? %>
   <% if @plan.user.id == current_user.id %>
@@ -79,3 +129,21 @@
 
 
 </section>
+
+<script>
+$(".pc_on").hide();
+$(".sp").hide();
+$(".sp_on").click(function(){
+  $(".not_sp").hide();
+  $(".sp").show();
+  $(".sp_on").hide();
+  $(".pc_on").show();
+})
+
+$(".pc_on").click(function(){
+  $(".not_sp").show();
+  $(".sp").hide();
+  $(".sp_on").show();
+  $(".pc_on").hide();
+})
+</script>

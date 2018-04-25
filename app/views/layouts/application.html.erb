@@ -41,9 +41,15 @@
     <%= render 'layouts/header' %>
     <%= yield %>
     <footer>
+    <% if user_signed_in? %>
       <%= link_to new_plan_path, class: 'btn-floating btn-large waves-effect waves-light red' do %>
        <i class="material-icons">add</i>
       <% end %>
+    <% else %>
+      <%= link_to new_user_session_path, class: 'btn-floating btn-large waves-effect waves-light red' do %>
+       <i class="material-icons">add</i>
+      <% end %>
+    <% end %>
     </footer>
     <div id="fb-root"></div>
 <script>(function(d, s, id) {

@@ -223,6 +223,33 @@ footer{
     max-height: 200px;
   }
 }
+
+.active{
+  display:block;
+}
+.non_active{
+  display:none;
+}
+.sp{
+  .single_block{
+    border:1px solid #333;
+    margin: .5em auto 1em;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);/*影*/
+    border-top: solid 5px #5d627b;
+    h4{
+      margin:.7em auto .5em;
+    }
+    p{
+      margin-top:.1em;
+    }
+  }
+}
+.sp_on,.pc_on{
+  padding:0 1rem;
+  i.left{
+    margin-right: 5px;
+  }
+}
 @media (min-width: 600px) {
   .login_top_img{
     img{
@@ -238,6 +265,9 @@ footer{
         }
       }
     }
+  }
+  .sp_on{
+    display:none;
   }
 }
 
