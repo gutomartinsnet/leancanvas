@@ -105,54 +105,54 @@
 <div class="sp">
 <%= form_for(@plan) do  |f| %>
   <div class="input-field">
-    <%= f.text_field :title, autofocus: true, autocomplete: "title",:tabindex => "1",:required => true %>
+    <%= f.text_field :title, autofocus: true, autocomplete: "title",:required => true %>
     <%= f.label :title, "サービス名（入力必須）" %>
   </div>
 
     <div class="input-field single_block">
-      <%= f.text_area :problem, class: 'materialize-textarea sp_textarea',:tabindex => "2",:placeholder=>"上位3つの課題" ,:required => true %>
+      <%= f.text_area :problem, class: 'materialize-textarea sp_textarea',:placeholder=>"上位3つの課題" ,:required => true %>
       <%= f.label :problem,"課題",class: 'sp_label'  %>
     </div>
 
     <div class="input-field single_block">
-      <%= f.text_area :solution, class: 'materialize-textarea sp_textarea',:tabindex => "5",:placeholder=>"上位3つの機能" ,:required => true %>
+      <%= f.text_area :solution, class: 'materialize-textarea sp_textarea',:placeholder=>"上位3つの機能" ,:required => true %>
       <%= f.label :solution,"ソリューション",class: 'sp_label'  %>
     </div>
 
 
     <div class="input-field single_block">
-      <%= f.text_area :parameter, class: 'materialize-textarea sp_textarea',:tabindex => "9",:placeholder=>"計測する主要活動" ,:required => true %>
+      <%= f.text_area :parameter, class: 'materialize-textarea sp_textarea',:placeholder=>"計測する主要活動" ,:required => true %>
       <%= f.label :parameter,"主要指標",class: 'sp_label'  %>
     </div>
 
     <div class="input-field single_block">
-      <%= f.text_area :valu, class: 'materialize-textarea sp_textarea',:tabindex => "4",:placeholder=>"あなたの差別化要因と注目に値する価値を説明した単一で明確な説得力のあるメッセージ",:required => true  %>
+      <%= f.text_area :valu, class: 'materialize-textarea sp_textarea',:placeholder=>"あなたの差別化要因と注目に値する価値を説明した単一で明確な説得力のあるメッセージ",:required => true  %>
       <%= f.label :valu,"独自の価値提案" ,class: 'sp_label' %>
     </div>
 
     <div class="input-field single_block">
-      <%= f.text_area :superiority, class: 'materialize-textarea sp_textarea' ,:tabindex => "10",:placeholder=>"簡単にコピーや購入ができないもの",:required => true  %>
+      <%= f.text_area :superiority, class: 'materialize-textarea sp_textarea' ,:placeholder=>"簡単にコピーや購入ができないもの",:required => true  %>
       <%= f.label :superiority,"圧倒的な優位性" ,class: 'sp_label' %>
     </div>
 
     <div class="input-field single_block">
-      <%= f.text_area :chanel, class: 'materialize-textarea sp_textarea',:tabindex => "6",:placeholder=>"顧客への経路",:required => true  %>
+      <%= f.text_area :chanel, class: 'materialize-textarea sp_textarea',:placeholder=>"顧客への経路",:required => true  %>
       <%= f.label :chanel,"チャネル" ,class: 'sp_label' %>
     </div>
 
     <div class="input-field single_block">
-      <%= f.text_area :segment, class: 'materialize-textarea sp_textarea',:tabindex => "3",:placeholder=>"ターゲットにする顧客",:required => true  %>
+      <%= f.text_area :segment, class: 'materialize-textarea sp_textarea',:placeholder=>"ターゲットにする顧客",:required => true  %>
       <%= f.label :segment,"顧客セグメント" ,class: 'sp_label' %>
     </div>
 
 
     <div class="input-field single_block">
-      <%= f.text_area :cost, class: 'materialize-textarea sp_textarea',:tabindex => "8",:placeholder=>"流通コスト/顧客獲得コスト/ホスティングコスト/人件費など",:required => true  %>
+      <%= f.text_area :cost, class: 'materialize-textarea sp_textarea',:placeholder=>"流通コスト/顧客獲得コスト/ホスティングコスト/人件費など",:required => true  %>
       <%= f.label :cost,"コスト構造" ,class: 'sp_label' %>
     </div>
 
     <div class="input-field single_block">
-      <%= f.text_area :profit, class: 'materialize-textarea sp_textarea',:tabindex => "7",:placeholder=>"収益モデル/収益/顧客生涯価値/粗利益",:required => true  %>
+      <%= f.text_area :profit, class: 'materialize-textarea sp_textarea',:placeholder=>"収益モデル/収益/顧客生涯価値/粗利益",:required => true  %>
       <%= f.label :profit,"収益の流れ" ,class: 'sp_label' %>
     </div>
 
@@ -164,7 +164,7 @@
 </div>
 
   <div class="actions center-align btn_block">
-    <%= f.submit "追加する", class: 'btn waves-effect waves-light' ,:tabindex => "11",:required => true %>
+    <%= f.submit "追加する", class: 'btn waves-effect waves-light' ,:required => true %>
   </div>
 
 <% end %>
