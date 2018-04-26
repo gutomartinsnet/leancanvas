@@ -23,13 +23,25 @@ h2{
 .tw_btn{
   text-align:right;
 }
-footer{
+
+.add_plan_block{
   position: fixed;
   bottom: 2em;
   right: 1em;
   z-index: 99;
+  max-width:100%;
 }
 
+footer{
+  width:100%;
+  text-align:center;
+  background-color:#ee6e73;
+  color: #fff;
+  padding: .5em 0;
+  .container{
+    margin: .5em auto;
+  }
+}
 // header
 .user_icon{
   margin: 0 18px;

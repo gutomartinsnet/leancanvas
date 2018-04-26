@@ -18,7 +18,7 @@ class PlansController < ApplicationController
   def create
     @plan = current_user.plans.new(plan_params)
     if @plan.save
-      redirect_to @plan, notice: 'LeanCanvasを作成しました'
+      redirect_to users_show_path(current_user.username), notice: 'LeanCanvasを作成しました'
     else
       render :new
     end
