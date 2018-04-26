@@ -40,7 +40,7 @@
     <!-- End Google Tag Manager (noscript) -->
     <%= render 'layouts/header' %>
     <%= yield %>
-    <footer>
+    <div class="add_plan_block">
     <% if user_signed_in? %>
       <%= link_to new_plan_path, class: 'btn-floating btn-large waves-effect waves-light red' do %>
        <i class="material-icons">add</i>
@@ -50,6 +50,18 @@
        <i class="material-icons">add</i>
       <% end %>
     <% end %>
+    </div>
+    <footer>
+      <div class="container">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScVXQo32Wh-nUK5fzSErwoFEKyoav0jh-Kv34MzP6mN8BHTIQ/viewform?usp=sf_link" class="white-text" target="_blank">
+          お問い合わせ
+        </a>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2018 Copyright LeancanvasMaker 
+         </div>
+      </div>
     </footer>
     <div id="fb-root"></div>
 <script>(function(d, s, id) {
