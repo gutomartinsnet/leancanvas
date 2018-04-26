@@ -250,6 +250,20 @@ footer{
     margin-right: 5px;
   }
 }
+
+#leancanvas_form{
+  .sp,.not_sp{
+    margin-top:2.5em;
+  }
+  // new.html.erb
+  .sp_textarea{
+    padding-top: 2.1rem !important;
+  }
+  .sp_label{
+    top: 1.5em !important;
+  }
+
+}
 @media (min-width: 600px) {
   .login_top_img{
     img{
