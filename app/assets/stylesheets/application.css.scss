@@ -174,59 +174,89 @@ a.brand-logo{
 //     max-width: 100%;
 //   }
 // }
-.login_top_img{
-  background: image-url('/business_top.jpg');
-  background-size: cover;
+.login_top{
+  height: 78vh;
+  background-color:#fffffe;
+  h3{
+    font-size:1.6em;
+    margin-top:0;
+    padding-top:1em;
+  }
+  div.login_top_img{
+    width:40%;
+    margin: 0 auto;
+    h3.center{
+     margin-bottom:.9em;
+    }
+    img{
+      max-width:100%;
+    }
+  }
+  .login_block{
+    padding-top:1.8em;
+    h3.center{
+    font-size:1.5em;
+    }
+    .sns_login a{
+      width:80%;
+      border:1px solid #fff;
+      margin:.8em auto;
+      line-height:30px;
+    }
+  }
+}
+// .login_top_img{
+  // background: image-url('/business_top.jpg');
+  // background-size: cover;
   // -webkit-background-size: cover;
   // -moz-background-size: cover;
   // -o-background-size: cover;
   // background-size: cover;
-  height: 95vh;
-  width: 100%;
-  background-position: center center;
-  text-align: center;
-  position: relative;
-  &:before {
-    z-index: 0;
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color:rgba(0,0,0,.05);
-  }
-  img{
-    max-width: 60%;
-    border-radius: 50%;
-    padding: 1rem;
-    margin-top: 4rem;
-  }
-  .login_block{
-    position: absolute;
-    bottom: 8em;
-    right: 0;
-    left: 0;
-    h3.center{
-      font-size: 1.5rem;
-      margin: 0;
-      color: #fff;
-      margin: 3rem auto 1rem;
-    }
-    .login_link{
-      a{
-        border: 2px solid #fff;
-        width: 80%;
-        text-align: center;
-        line-height: 30px;
-      }
-    }
-    .fb_login_link{
-      margin-bottom: 1.5rem;
-    }
-  }
-}
+  // height: 95vh;
+  // width: 100%;
+  // background-position: center center;
+  // text-align: center;
+  // position: relative;
+  // &:before {
+  //   z-index: 0;
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   background-color:rgba(0,0,0,.05);
+  // }
+  // img{
+  //   max-width: 60%;
+  //   border-radius: 50%;
+  //   padding: 1rem;
+  //   margin-top: 4rem;
+
+  //   position: absolute;
+  //   bottom: 8em;
+  //   right: 0;
+  //   left: 0;
+  //   h3.center{
+  //     font-size: 1.5rem;
+  //     margin: 0;
+  //     color: #fff;
+  //     margin: 3rem auto 1rem;
+  //   }
+  //   .login_link{
+  //     a{
+  //       border: 2px solid #fff;
+  //       width: 80%;
+  //       text-align: center;
+  //       line-height: 30px;
+  //     }
+  //   }
+  //   .fb_login_link{
+  //     margin-bottom: 1.5rem;
+  //   }
+  // }
+// }
 
 .btn_block{
   margin-top:1em;
@@ -281,6 +311,7 @@ a.brand-logo{
     }
   }
 }
+
 
 @media (min-width: 600px) {
   .login_top_img{
