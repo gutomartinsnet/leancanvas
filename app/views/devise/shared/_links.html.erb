@@ -25,14 +25,20 @@
 <%- if devise_mapping.omniauthable? %>
   <div class="center-align login_block">
     <h3 class="center">まずは10秒でリーンキャンバス<br>を始めてみましょう</h3>
-    <%- resource_class.omniauth_providers.each do |provider| %>
+    <%#- resource_class.omniauth_providers.each do |provider| %>
       <!-- <%#= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br /> -->
     <%# end -%>
-    <div class="tw_login_link login_link">
-      <%= link_to omniauth_authorize_path(resource_name, provider),class: 'btn waves-effect waves-light blue  lighten-1' do %>
-        <i class="fab fa-twitter"></i> Twitterで登録/ログイン
-      <% end %>
-    <% end -%>
+    <!-- <div class="tw_login_link login_link"> -->
+      <%#= link_to omniauth_authorize_path(resource_name, provider),class: 'btn waves-effect waves-light blue  lighten-1' do %>
+        <!-- <i class="fab fa&#45;twitter"></i> Twitterで登録/ログイン -->
+      <%# end %>
+    <%# end -%>
+    <%= link_to user_facebook_omniauth_authorize_path,class: 'btn waves-effect waves-light blue darken-3' do %>
+      <i class="fab fa-facebook"></i> Facebookで登録/ログイン
+    <% end %>
+      <%= link_to user_twitter_omniauth_authorize_path,class: 'btn waves-effect waves-light blue  lighten-1' do %>
+      <i class="fab fa-twitter"></i> Twitterで登録/ログイン
+    <% end %>
     </div>
   </div>
 <% end -%>

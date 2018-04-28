@@ -278,4 +278,5 @@ Devise.setup do |config|
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   #config.omniauth :twitter, "d5f9ImN6TRLsRCLMg6yPaIkE2", "UQJhGzQM9DQ1WzkEXSZw67CC64K205RFVqyZtM7wK9RcspdkWc"
   config.omniauth :twitter, ENV["TW_APP_ID"] , ENV["TW_SECRET_KEY"]
+  config.omniauth :facebook, ENV["FB_APP_ID"], ENV["FB_SECRET_KEY"]
 end
