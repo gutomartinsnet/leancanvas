@@ -166,16 +166,7 @@ a.brand-logo{
   }
 }
 
-
-// ログインページ
-// .leancanvas_img_block{
-//     text-align: center;
-//   img{
-//     max-width: 100%;
-//   }
-// }
 .login_top{
-  height: 78vh;
   background-color:#fffffe;
   h3{
     font-size:1.6em;
@@ -184,6 +175,7 @@ a.brand-logo{
   }
   div.login_top_img{
     width:40%;
+    text-align:center;
     margin: 0 auto;
     h3.center{
      margin-bottom:.9em;
@@ -205,59 +197,6 @@ a.brand-logo{
     }
   }
 }
-// .login_top_img{
-  // background: image-url('/business_top.jpg');
-  // background-size: cover;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
-  // -o-background-size: cover;
-  // background-size: cover;
-  // height: 95vh;
-  // width: 100%;
-  // background-position: center center;
-  // text-align: center;
-  // position: relative;
-  // &:before {
-  //   z-index: 0;
-  //   content: "";
-  //   display: block;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   right: 0;
-  //   bottom: 0;
-  //   background-color:rgba(0,0,0,.05);
-  // }
-  // img{
-  //   max-width: 60%;
-  //   border-radius: 50%;
-  //   padding: 1rem;
-  //   margin-top: 4rem;
-
-  //   position: absolute;
-  //   bottom: 8em;
-  //   right: 0;
-  //   left: 0;
-  //   h3.center{
-  //     font-size: 1.5rem;
-  //     margin: 0;
-  //     color: #fff;
-  //     margin: 3rem auto 1rem;
-  //   }
-  //   .login_link{
-  //     a{
-  //       border: 2px solid #fff;
-  //       width: 80%;
-  //       text-align: center;
-  //       line-height: 30px;
-  //     }
-  //   }
-  //   .fb_login_link{
-  //     margin-bottom: 1.5rem;
-  //   }
-  // }
-// }
-
 .btn_block{
   margin-top:1em;
 }
