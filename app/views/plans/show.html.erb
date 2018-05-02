@@ -116,7 +116,7 @@
 <% end %>
 <p>
   <% if @plan.image.url != nil %>
-    <a href="<%= @plan.image %>" download="<%= @plan.title%>" class="btn waves-effect waves-light">ダウンロード</a>
+    <a href="<%= @plan.image %>" download="<%= @plan.title%>" class="btn waves-effect waves-light" target="_blank">ダウンロード</a>
   <% else %>
     <%= form_for(@plan,url: plan_path(@plan), remote: true) do |f| %>
       <%= f.hidden_field :id %>
