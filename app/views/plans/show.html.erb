@@ -120,7 +120,7 @@
   <% else %>
     <%= form_for(@plan,url: plan_path(@plan), remote: true) do |f| %>
       <%= f.hidden_field :id %>
-      <%= f.submit "画像を生成", class: 'btn waves-effect waves-light' %>
+      <%= f.submit "画像を生成", class: 'btn waves-effect waves-light',data: { disable_with: "画像生成中..." }%>
     <% end %>
   <% end %>
 </p>
