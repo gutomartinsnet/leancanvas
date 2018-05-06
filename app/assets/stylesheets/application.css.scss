@@ -162,7 +162,7 @@ a.brand-logo{
   }
 }
 
-.card.image{
+.card.small{
   height:auto !important;
 }
 .card-image{
@@ -261,22 +261,19 @@ a.brand-logo{
 
 
 @media (min-width: 600px) {
-  .login_top_img{
+  .login_top{
     img{
       max-width: 20%;
     }
     .login_block{
-      .login_link{
+      .sns_login{
         a{
-          border: 2px solid #fff;
-          width: 40%;
-          text-align: center;
-          line-height: 30px;
+          width: 30%;
         }
       }
     }
   }
-  .sp_on{
+    .sp_on{
     display:none;
   }
 }
