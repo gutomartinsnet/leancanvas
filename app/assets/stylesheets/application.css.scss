@@ -164,6 +164,9 @@ a.brand-logo{
 
 .card.small{
   height:auto !important;
+  .card-image{
+    max-height:75% !important;
+  }
 }
 .card-image{
   overflow: hidden;
