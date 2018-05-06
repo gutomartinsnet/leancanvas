@@ -163,7 +163,7 @@ a.brand-logo{
 }
 
 .card.small{
-  height:500px !important;
+  height:auto !important;
   .card-image{
     max-height:75% !important;
   }
@@ -280,7 +280,7 @@ a.brand-logo{
     display:none;
   }
   .card.small{
-    height:auto !important;
+    height:500px !important;
   }
 }
 
