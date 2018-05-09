@@ -13,7 +13,11 @@ class User < ApplicationRecord
     find_or_create_by(provider: auth["provider"], uid: auth["uid"]) do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
-      user.username = auth["info"]["nickname"]
+      if auth["info"]["nickname"] != nil
+        user.username = auth["info"]["nickname"]
+      else
+        user.username = auth["info"]["name"]
+      end
       user.name = auth["info"]["name"]
       user.image = auth["info"]["image"]
       user.email = User.dummy_email(auth)
