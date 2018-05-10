@@ -60,6 +60,6 @@ class PlansController < ApplicationController
   end
 
   def plan_params
-    params.require(:plan).permit(:title,:segment,:problem,:valu,:solution,:chanel,:profit,:cost,:parameter,:superiority,:image, :desplay)
+    params.require(:plan).permit(:id,:title,:segment,:problem,:valu,:solution,:chanel,:profit,:cost,:parameter,:superiority,:image, :desplay)
   end
 end
