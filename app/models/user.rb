@@ -16,7 +16,7 @@ class User < ApplicationRecord
       if auth["info"]["nickname"] != nil
         user.username = auth["info"]["nickname"]
       else
-        user.username = auth["info"]["name"]
+        user.username = SecureRandom.urlsafe_base64(9)
       end
       user.name = auth["info"]["name"]
       user.image = auth["info"]["image"]
@@ -74,7 +74,7 @@ class User < ApplicationRecord
   end
   
   private
- 
+
   def self.dummy_email(auth)
     "#{auth.uid}-#{auth.provider}@example.com"
   end
