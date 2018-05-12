@@ -1,7 +1,7 @@
   <nav class="nav-extended">
     <div class="nav-wrapper">
       <%= link_to 'LeanCanvasMaker', plans_path,class: 'brand-logo' %>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse" onclick="ga('send', 'event', 'button', 'click', 'メニューボタン', true);" ><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><%= link_to 'ホーム', plans_path %></li>
         <% if user_signed_in? %>
@@ -9,8 +9,8 @@
         <li><%= link_to 'マイページ',users_show_path(current_user.username) %></li>
         <li><%= link_to '設定',edit_user_registration_path %></li>
         <% else %>
-        <li><%= link_to '描く',new_user_session_path %></li>
-        <li><%= link_to 'ログイン',new_user_session_path %></li>
+        <li><%= link_to '描く',new_user_session_path, onclick: "ga('send','event','link','click','メニューからリーンキャンバスの作成', true);" %></li>
+        <li><%= link_to 'ログイン',new_user_session_path,onclick: "ga('send','event','link','click','メニューからログインボタン', true);" %></li>
         <% end %>
 
       </ul>
@@ -34,7 +34,7 @@
         </li>
         <% if user_signed_in? %>
         <li>
-          <%= link_to new_plan_path do %>
+          <%= link_to new_plan_path,onclick: "ga('send','event','link','click','メニューからリーンキャンバスの作成', true);" do %>
             <i class="fas fa-pencil-alt"></i>描く
           <% end %>
           </li>
@@ -45,12 +45,12 @@
         </li>
         <% else %>
         <li>
-          <%= link_to new_user_session_path do %>
+          <%= link_to new_user_session_path,onclick: "ga('send','event','link','click','メニューからリーンキャンバスの作成', true);" do %>
             <i class="fas fa-pencil-alt"></i>描く
           <% end %>
         </li>
         <li>
-          <%= link_to new_user_session_path do %>
+          <%= link_to new_user_session_path,onclick: "ga('send','event','link','click','メニューからログインボタン', true);" do %>
             <i class="fas fa-sign-in-alt"></i>ログイン
           <% end %>
         </li>

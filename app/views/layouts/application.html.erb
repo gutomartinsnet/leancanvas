@@ -64,18 +64,18 @@
     <%= yield %>
     <div class="add_plan_block">
     <% if user_signed_in? %>
-      <%= link_to new_plan_path, class: 'btn-floating btn-large waves-effect waves-light red' do %>
+      <%= link_to new_plan_path, class: 'btn-floating btn-large waves-effect waves-light red', onclick: "ga('send','event','link','click','footerリーンキャンバスの作成', true);" do %>
        <i class="material-icons">add</i>
       <% end %>
     <% else %>
-      <%= link_to new_user_session_path, class: 'btn-floating btn-large waves-effect waves-light red' do %>
+      <%= link_to new_user_session_path, class: 'btn-floating btn-large waves-effect waves-light red', onclick: "ga('send','event','link','click','footerリーンキャンバスの作成', true);" do %>
        <i class="material-icons">add</i>
       <% end %>
     <% end %>
     </div>
     <footer>
       <div class="container">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScVXQo32Wh-nUK5fzSErwoFEKyoav0jh-Kv34MzP6mN8BHTIQ/viewform?usp=sf_link" class="white-text" target="_blank">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScVXQo32Wh-nUK5fzSErwoFEKyoav0jh-Kv34MzP6mN8BHTIQ/viewform?usp=sf_link" class="white-text" target="_blank" onclick="ga('send', 'event', 'link', 'click', 'お問い合わせ', true);" >
           お問い合わせ
         </a>
       </div>
