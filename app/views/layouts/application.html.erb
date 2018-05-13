@@ -13,10 +13,10 @@
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-P9C7LCK');</script>
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KX4XMQ5');</script>
     <!-- End Google Tag Manager -->
     <%= csrf_meta_tags %>
     <%= display_meta_tags(default_meta_tags) %>
@@ -57,25 +57,25 @@
 
   <body>
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9C7LCK"
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KX4XMQ5"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <%= render 'layouts/header' %>
     <%= yield %>
     <div class="add_plan_block">
     <% if user_signed_in? %>
-      <%= link_to new_plan_path, class: 'btn-floating btn-large waves-effect waves-light red', onclick: "ga('send','event','link','click','footerリーンキャンバスの作成', true);" do %>
+      <%= link_to new_plan_path, class: 'btn-floating btn-large waves-effect waves-light red' do %>
        <i class="material-icons">add</i>
       <% end %>
     <% else %>
-      <%= link_to new_user_session_path, class: 'btn-floating btn-large waves-effect waves-light red', onclick: "ga('send','event','link','click','footerリーンキャンバスの作成', true);" do %>
+      <%= link_to new_user_session_path, class: 'btn-floating btn-large waves-effect waves-light red' do %>
        <i class="material-icons">add</i>
       <% end %>
     <% end %>
     </div>
     <footer>
       <div class="container">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScVXQo32Wh-nUK5fzSErwoFEKyoav0jh-Kv34MzP6mN8BHTIQ/viewform?usp=sf_link" class="white-text" target="_blank" onclick="ga('send', 'event', 'link', 'click', 'お問い合わせ', true);" >
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScVXQo32Wh-nUK5fzSErwoFEKyoav0jh-Kv34MzP6mN8BHTIQ/viewform?usp=sf_link" class="white-text" target="_blank">
           お問い合わせ
         </a>
       </div>
