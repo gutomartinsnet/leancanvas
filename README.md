@@ -1,22 +1,7 @@
-# README
+# LeancanvasMaker
 
-pettitmilkは、Twitter上で動くリマインダーです。
-・テストの勉強
-・綺麗な第3正規化
-・Vueで動かすための前段
-となることを目指します。
+![Demo](https://raw.githubusercontent.com/wiki/toywonder/leancanvas/img/leancanvasmaker_demo.gif)
 
-* ruby 2.4.0
-* rails 5.1.4
+## Description
+リーンキャンバスをwebで作成、一般公開できるサービスです。簡単に画像を生成してダウンロードすることも出来ます。
 
-* モデル
-Task管理Table
- - name,state,date,user_id
-
-Taskテーブル
- - name,frequency,state,perticipant_num,archievers_num
-
-ユーザーテーブル
- - name,img
-
- 
